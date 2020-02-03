@@ -1,0 +1,86 @@
+<div class="row">
+
+    <div class="col">
+        <h1>Protoss</h1>
+        <hr>
+
+        <div *ngIf="mostrar" class="card text-white bg-dark mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase.autor }}</h5>
+                <p class="card-text">{{ frase.mensaje }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar=!mostrar" class="btn btn-outline-dark btn-block">
+            Mostrar/ocultar
+        </button>
+    </div>
+
+    <div class="col">
+        <h1>------</h1>
+        <hr>
+
+        <div *ngIf="mostrar2" class="card text-white bg-dark mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase2.autor }}</h5>
+                <p class="card-text">{{ frase2.mensaje }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar2=!mostrar2" class="btn btn-outline-dark btn-block">
+            Mostrar/ocultar
+        </button>
+    </div>
+
+    <div class="col">
+        <h1>------</h1>
+        <hr>
+
+        <div *ngIf="mostrar3" class="card text-white bg-dark mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase3.autor }}</h5>
+                <p class="card-text">{{ frase3.mensaje }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar3=!mostrar3" class="btn btn-outline-dark btn-block">
+            Mostrar/ocultar
+        </button>
+    </div>
+
+    <div class="col">
+        <h1>------</h1>
+        <hr>
+
+        <div *ngIf="mostrar4" class="card text-white bg-dark mb-3" style="width: 100%;">
+
+            <div class="card-body">
+                <h5 class="card-title">{{ frase4.autor }}</h5>
+                <p class="card-text">{{ frase4.mensaje }}</p>
+            </div>
+        </div>
+        <button (click)="mostrar4=!mostrar4" class="btn btn-outline-dark btn-block">
+            Mostrar/ocultar
+        </button>
+    </div>
+
+
+
+
+
+
+    <div class="col">
+        <h1>Unidades</h1>
+        <hr>
+
+
+
+
+        <ul class="list-group">
+            <li *ngFor="let personaje of personajes;let i= index" class="list-group-item">
+                {{ i + 1}} - {{ personaje }}
+            </li>
+
+        </ul>
+    </div>
+</div>
